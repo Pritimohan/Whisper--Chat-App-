@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import FormInputs from '../../components/FormInputs'
 import Button from '../../components/Button'
+import { Link } from 'react-router-dom'
 
 function LogIn() {
   const [values, setValues] = useState({})
@@ -35,7 +36,7 @@ function LogIn() {
               ))}
               <Button name="Log In" />
             </form>
-            <p className='py-4'>Don&apos;t have account ? <a href="#" className=" text-lightblue">Sign Up</a> </p>
+            <p className='py-4'>Don&apos;t have account ? <Link to="/signup" className=" text-lightblue">Sign Up</Link> </p>
           </div>
           <div className=' w-1/2 h-full bg-lightblue rounded-3xl bg-login bg-no-repeat bg-cover'></div>
         </div>

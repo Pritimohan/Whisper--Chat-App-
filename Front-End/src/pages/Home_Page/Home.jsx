@@ -8,12 +8,10 @@ function Home() {
             <div className=' h-screen w-screen p-12 flex justify-center items-center '>
                 <div className=' w-full h-full flex items-center justify-center p-2 gap-2'>
                     <SideBar />
-                    <ChatArea/>
-                    
+                    <ChatArea isSelected={false} />
                 </div>
 
             </div>
-
         </>
     )
 }

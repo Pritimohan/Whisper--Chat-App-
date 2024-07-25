@@ -3,8 +3,8 @@ import React from 'react'
 function DropDownList() {
   return (
     <>
-    <select name='gender'aria-placeholder='Gender' className='border-b-2 p-2 my-2 outline-none w-'>
-        <option className='text-gray '>Gender</option>
+    <select name='gender' className='block p-2 w-52 m-2 border-b-2 focus:outline-none focus:ring-0 peer'>
+        {/* <option className='text-gray '>Gender</option> */}
         <option value="male">Male</option>
         <option value="female">Female</option>
     </select>

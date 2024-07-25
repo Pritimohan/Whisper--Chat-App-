@@ -2,18 +2,19 @@
 
 
 import './App.css'
-import Home from './pages/Home_Page/Home.jsx'
-import LogIn from './pages/Login_Page/LogIn.jsx'
-import SingnUp from './pages/SignUp_Page/SingnUp.jsx'
+import Header from './components/Header.jsx'
+import { Home } from "./pages/pages.jsx"
+import { Toaster } from 'react-hot-toast'
+import { Outlet } from "react-router-dom"
 
 function App() {
   // const [count, setCount] = useState(0)
 
   return (
     <>
-      {/* <LogIn /> */}
-      {/* <SingnUp/> */}
-      <Home/>
+      <Toaster />
+      <Header />
+      <Outlet/>
     </>
   )
 }

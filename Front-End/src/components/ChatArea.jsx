@@ -4,7 +4,8 @@ import Conversations from './Conversations';
 import { VscSend } from "react-icons/vsc";
 import ChatBubble from './ChatBubble';
 
-function ChatArea() {
+function ChatArea(props) {
+    const {isSelected}= props
 
     const [message, setMessage] = useState("")
 
@@ -13,6 +14,7 @@ function ChatArea() {
         console.log(e.target.message.value);
         setMessage(e.target.message.value)
     }
+
     return (
         <>
             <div className=' bg-black grow h-full rounded-3xl flex items-center justify-between flex-col overflow-hidden px-4 '>

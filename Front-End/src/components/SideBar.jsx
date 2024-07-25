@@ -20,9 +20,6 @@ function SideBar() {
           <Conversations styles="w-14 h-14" hover={true}/>
           <Conversations styles="w-14 h-14" hover={true}/>
           <Conversations styles="w-14 h-14" hover={true}/>
-      
-       
-
         </div>
       </div>
     </>
