@@ -1,23 +1,37 @@
 import { React } from 'react'
 import toast from 'react-hot-toast';
+import { useDispatch } from 'react-redux';
+import { useNavigate } from 'react-router-dom';
+// reducer import
+import { setLoggedInUserData } from '../redux/loggedInUserDataSlice.js';
 
 
 function useSignUp() {
+    const dispatch = useDispatch()
+    const navegate = useNavigate()
     const signup = async (inputDatas) => {
         const isSuccess = handleInputsErrors(inputDatas)
         if (!isSuccess) return;
 
         try {
-            const res = await fetch("/api/auth/singup", {
+            const response = await fetch("/api/auth/singup", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify(inputDatas)
             })
-            const data = await res.json()
+            const data = await response.json()
+
             if (data.error) {
                 throw new Error(data.error)
             }
-
+            dispatch(setLoggedInUserData(data.newUser))
+            localStorage.setItem("jwtToken", JSON.stringify(data.jwtToken))
+            localStorage.setItem("authUser", JSON.stringify(data.newUser.fullname))
+            localStorage.setItem("authUserId", JSON.stringify(data.newUser._id))
+            toast.success("Signed up successfully")
+            setTimeout(() => {
+                navegate("/")
+            }, 100);
         } catch (error) {
             toast.error(error.message)
         }

@@ -47,10 +47,10 @@ export async function signUpUsers(req, res) {
 
         if (newUser) {
             // generate token and set cookie
-            generateTokenAndSetCookie(newUser._id, res)
+            const jwtToken = generateTokenAndSetCookie(newUser._id, res)
             // save user
             await newUser.save()
-            return res.status(201).json({ newUser, message: "User created successfully" })
+            return res.status(201).json({ newUser, message: "User created successfully", jwtToken: jwtToken })
         }
         else {
             // if user not created
@@ -83,8 +83,9 @@ export async function logInUsers(req, res) {
             return res.status(400).json({ error: "Invalid password" })
         }
         //generate token and set cookie
-        generateTokenAndSetCookie(userData._id, res)
-        return res.status(200).json({ userData, message: "User logged in successfully" })
+        const jwtToken = generateTokenAndSetCookie(userData._id, res)
+
+        return res.status(200).json({ userData, message: "User logged in successfully", jwtToken: jwtToken })
 
     } catch (error) {
         console.log(`Error from login : ${error}`);

@@ -22,6 +22,7 @@ export async function isLoggedIn(req, res, next) {
     // if everything is fine, set user data in res.locals and call next
     req.user = userData;
     next();
+    
   } catch (error) {
     console.log(`Error from isloggdin: ${error}`);
     return res.status(500).json({ error: "Internal Server Error" });

@@ -9,7 +9,8 @@ export default {
       backgroundImage: {
         'body': "url('/pawel-czerwinski-1CZCGvc_DBQ-unsplash.jpg')",
         'login': "url('/login.jpg')",
-        'signup': "url('/singUp.jpg')"
+        'signup': "url('/singUp.jpg')",
+        'logo': "url('/Whisper Logo.png')"
       }
     },
     colors: {
@@ -24,7 +25,9 @@ export default {
       dipred: "#780000",
       lightGray: "#151619",
       black: "#0e0e0f",
-      pink: "#e3229e"
+      pink: "#e3229e",
+      pureblack:"#000000",
+
 
     }
   },

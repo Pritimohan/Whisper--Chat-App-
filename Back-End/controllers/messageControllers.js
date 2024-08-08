@@ -1,6 +1,7 @@
 import User from "../models/userModel.js";
 import Conversation from "../models/conversationModel.js";
 import Message from "../models/messageModel.js";
+import { getReceiverSocketId, io } from "../socket/socketIo.js";
 
 export async function sentMessage(req, res) {
   try {
@@ -14,6 +15,10 @@ export async function sentMessage(req, res) {
     } catch (error) {
       return res.status(404).json({ error: "User not found" });
     }
+    // check if message exists
+    if (!message) {
+      return res.status(404).json({ error: "Message not found" });
+    }
     // check if conversation exists
     let conversation = await Conversation.findOne({
       participants: { $all: [senderId, receiverId] },
@@ -24,10 +29,6 @@ export async function sentMessage(req, res) {
       conversation = await Conversation.create({
         participants: [senderId, receiverId],
       });
-    }
-    // check if message exists
-    if (!message) {
-      return res.status(404).json({ error: "Message not found" });
     }
     // create a new message
     const newMessage = new Message({
@@ -46,7 +47,17 @@ export async function sentMessage(req, res) {
     // await newMessage.save();
 
     await Promise.all([await conversation.save(), await newMessage.save()]);
+
+    //socket
+    const receiverSocketId = getReceiverSocketId(receiverId)
+    if (receiverSocketId) {
+      io.to(receiverSocketId).emit('newmessage', newMessage)
+    }
+
+
+
     return res.status(201).json({ message: "Message sent successfully" });
+
   } catch (error) {
     console.log(`Error from sentMessage: ${error}`);
     return res.status(500).json({ error: "Internal Server Error" });
@@ -57,15 +68,16 @@ export async function getMessage(req, res) {
   try {
     const senderId = req.user._id;
     const receiverId = req.params.id;
-    
+
     const conversation = await Conversation.findOne({
       participants: { $all: [senderId, receiverId] },
     }).populate("messages");
+
     // if conversation does not exist, return an error
     if (!conversation) {
-      res.status(400).json([]);
+      return res.status(404).json([]);
     }
-    res.status(200).json(conversation.messages);
+    res.status(200).json(conversation.messages); // return the messages
 
   } catch (error) {
     console.log(`Error from getMessage: ${error}`);

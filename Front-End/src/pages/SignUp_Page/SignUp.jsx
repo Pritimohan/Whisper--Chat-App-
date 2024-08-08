@@ -1,12 +1,13 @@
 import { useState } from 'react'
+import { Link } from 'react-router-dom'
+// hooks import
+import useSignUp from '../../hooks/useSignUp.jsx'
+// components import
 import FormInputs from '../../components/FormInputs.jsx'
 import Button from '../../components/Button.jsx'
 import DropDownList from '../../components/DropDownList.jsx'
-import useSignUp from '../../hooks/useSignUp.jsx'
-import { Link } from 'react-router-dom'
-
 function SingnUp() {
-  // const [values, setValues] = useState({})
+
 
   const formInputArr = [
     {
@@ -42,16 +43,16 @@ function SingnUp() {
 
 
 
-  ]
+  ] // array of objects containing input fields
 
-  const { signup } = useSignUp()
-  
-  const handleSignUpForm = (e) => {
+  const { signup } = useSignUp() // signup function from useSignUp hook
+  const handleSignUpForm = (e) => { // handle login form
     e.preventDefault()
     const formData = new FormData(e.target)
     const finalDatas = Object.fromEntries(formData.entries());
     signup(finalDatas)
   }
+  
   return (
     <>
       <div className=' h-screen w-screen p-6 flex justify-center items-center '>

@@ -2,36 +2,19 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import App from './App.jsx'
 import './index.css'
-import { RouterProvider, createBrowserRouter, } from 'react-router-dom'
-import { Home, LogIn, SingnUp } from "./pages/pages.jsx"
+import { RouterProvider, createBrowserRouter } from 'react-router-dom'
+import { Provider, useSelector } from 'react-redux'
+import { store } from './redux/store.js'
+import { Routers } from './routes/Routers.jsx'
 
+const router = Routers()
 
-const router = createBrowserRouter([
-  {
-    path: "/",
-    element: <App />,
-    children: [
-      {
-        path: "",
-        element:<Home />
-      },
-
-      {
-        path: "login",
-        element: <LogIn />
-      },
-      {
-        path: "home",
-        element: <SingnUp/>
-      }
-
-    ]
-  }
-])
 
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <Provider store={store}>
+      <RouterProvider router={router} />
+    </Provider>
   </React.StrictMode>,
 )

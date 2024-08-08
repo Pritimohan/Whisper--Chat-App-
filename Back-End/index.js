@@ -2,6 +2,7 @@
 import express from "express";
 import dotenv from "dotenv";
 import cookieParser from "cookie-parser";
+import { app ,server } from "./socket/socketIo.js";
 
 //route imports
 import { authRoutes, messageRoutes, userRoutes } from "./routes/routers.js";
@@ -9,7 +10,7 @@ import { authRoutes, messageRoutes, userRoutes } from "./routes/routers.js";
 import { connectDB } from "./db/dbConnection.js";
 
 dotenv.config();
-const app = express();
+
 const PORT = process.env.PORT;
 
 // Middlewares
@@ -25,7 +26,7 @@ app.use("/api/user", userRoutes);
 // })
 
 // Listen Server
-app.listen(PORT, (err) => {
+server.listen(PORT, (err) => {
   if (err) throw err;
   //DB connection
   connectDB(process.env.MONGO_DB_URI);

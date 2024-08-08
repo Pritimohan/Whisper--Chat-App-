@@ -1,10 +1,12 @@
 import React, { useState } from 'react'
+import { Link } from 'react-router-dom'
+// hooks import
+import useLogin from '../../hooks/useLogin'
+// components import
 import FormInputs from '../../components/FormInputs'
 import Button from '../../components/Button'
-import { Link } from 'react-router-dom'
 
 function LogIn() {
-  const [values, setValues] = useState({})
   const formInputArr = [
     {
       id: 1,
@@ -18,10 +20,14 @@ function LogIn() {
       placeholder: "Password",
       name: "password",
     },
-  ]
-  const onChange = (e) => {
-    setValues({ ...values, [e.target.name]: e.target.value })
-    console.log(values);
+  ] // array of objects containing input fields
+ 
+  const { login } = useLogin()     // login function from useLogin hook
+  const handleLoginForm = (e) => { // handle login form
+    e.preventDefault()
+    const response = new FormData(e.target);
+    const formData = Object.fromEntries(response)
+    login(formData);
   }
 
   return (
@@ -30,11 +36,11 @@ function LogIn() {
         <div className='bg-white w-4/6 h-4/5 flex justify-center items-center bg-tranparent border-solid p-4 rounded-3xl'>
           <div className=' w-1/2 h-full bg-tranparent rounded-3xl flex justify-center items-center flex-col '>
             <div className=' left-0 text-4xl py-4'>Log In</div>
-            <form className='flex flex-col justify-center items-center gap-4' >
+            <form onSubmit={handleLoginForm} className='flex flex-col justify-center items-center gap-4' >
               {formInputArr.map((inputs) => (
-                <FormInputs key={inputs.id} {...inputs} onChange={onChange} />
+                <FormInputs key={inputs.id} {...inputs} />
               ))}
-              <Button name="Log In" />
+              <Button type={"submit"} name="Log In" />
             </form>
             <p className='py-4'>Don&apos;t have account ? <Link to="/signup" className=" text-lightblue">Sign Up</Link> </p>
           </div>

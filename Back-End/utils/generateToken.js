@@ -13,4 +13,5 @@ export function generateTokenAndSetCookie(userId, res) {
         secure: process.env.NODE_ENV === "production" ? true : false,
     };
     res.cookie("token", jwtToken, options);
+    return jwtToken;
 }
