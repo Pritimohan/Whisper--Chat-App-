@@ -70,11 +70,17 @@ The Real-Time Chat Application is a modern web-based chat application that facil
 4. **Configure Environment Variables**
    Create a `.env` file in the root directory of the project. Add the following environment variables:
 
+<<<<<<< HEAD
    ```env
    MONGO_URI=your-mongodb-uri
+=======
+   MONGO_DB_URI=your-mongodb-uri
+   
+>>>>>>> 3bd9bcce300c8eba909c78ddfe972db8987f924c
    JWT_SECRET=your-jwt-secret
    ```
 
+<<<<<<< HEAD
 5. **Start the Application**
 
    ```bash
@@ -90,6 +96,20 @@ The Real-Time Chat Application is a modern web-based chat application that facil
    ```bash
    http://localhost:3000
    ```
+=======
+6. **Start the Application**
+    ```bash
+    # Start the backend server
+    cd backend
+    npm start
+    # Start the frontend application
+    cd frontend
+    npm run dev
+
+7. **Access the Application**
+    ```bash
+    http://localhost:3000
+>>>>>>> 3bd9bcce300c8eba909c78ddfe972db8987f924c
 
 ## License
 
