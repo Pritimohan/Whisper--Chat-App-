@@ -13,19 +13,23 @@ The Real-Time Chat Application is a modern web-based chat application that facil
 ## Technologies Used
 
 - **Frontend**:
+
   - **React.js**: For building the user interface.
   - **Tailwind CSS**: For styling the application with a modern, responsive design.
   - **React Router**: For handling client-side routing.
 
 - **Backend**:
+
   - **Node.js**: Server-side runtime environment.
   - **Express.js**: Web framework for building APIs.
   - **Socket.io**: For enabling real-time, bi-directional communication between clients and the server.
 
 - **Database**:
+
   - **MongoDB Atlas**: NoSQL database for storing user and chat data.
 
 - **Authentication**:
+
   - **JWT (JSON Web Tokens)**: For secure user authentication and session management.
 
 - **Password Security**:
@@ -41,38 +45,51 @@ The Real-Time Chat Application is a modern web-based chat application that facil
 ### Setup
 
 1. **Clone the Repository**
+
    ```bash
    git clone https://github.com/Pritimohan/Whisper--Chat-App-.git
    cd Whisper--Chat-App-
 
+   ```
+
 2. **Install Backend Dependencies**
-    ```bash
-    npm install
+
+   ```bash
+   npm install
+
+   ```
 
 3. **Install Frontend Dependencies**
-    ```bash
-    cd frontend
-    npm install
+
+   ```bash
+   cd frontend
+   npm install
+
+   ```
 
 4. **Configure Environment Variables**
-Create a .env file in the server directory with the following content:
+   Create a `.env` file in the root directory of the project. Add the following environment variables:
 
+   ```env
    MONGO_URI=your-mongodb-uri
    JWT_SECRET=your-jwt-secret
-
+   ```
 
 5. **Start the Application**
-    ```bash
-    # Start the backend server
-    cd backend
-    npm start
-    # Start the frontend application
-    cd frontend
-    npm run dev
+
+   ```bash
+   # Start the backend server
+   cd backend
+   npm start
+   # Start the frontend application
+   cd frontend
+   npm run dev
+   ```
 
 6. **Access the Application**
-    ```bash
-    http://localhost:3000
+   ```bash
+   http://localhost:3000
+   ```
 
 ## License
 
@@ -89,6 +106,9 @@ This project is open source and available under the [MIT License](LICENSE).
 - [bcrypt Documentation](https://www.npmjs.com/package/bcrypt)
 - [Express.js Documentation](https://expressjs.com/en/5x/api.html)
 - [React Router Documentation](https://reactrouter.com/web/guides/quick-start)
-```
+- [React hot toast](https://www.npmjs.com/package/react-hot-toast)
 
+## Author
+
+- [Pritimohan Shit]
 
