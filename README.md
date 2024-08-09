@@ -80,7 +80,7 @@ The Real-Time Chat Application is a modern web-based chat application that facil
    JWT_SECRET=your-jwt-secret
    ```
 
-<<<<<<< HEAD
+
 5. **Start the Application**
 
    ```bash
@@ -109,7 +109,7 @@ The Real-Time Chat Application is a modern web-based chat application that facil
 7. **Access the Application**
     ```bash
     http://localhost:3000
->>>>>>> 3bd9bcce300c8eba909c78ddfe972db8987f924c
+    ```
 
 ## License
 
