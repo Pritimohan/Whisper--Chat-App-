@@ -9,6 +9,10 @@ The Real-Time Chat Application is a modern web-based chat application that facil
 - **Real-Time Messaging**: Real-time communication powered by Socket.io.
 - **User Authentication**: Secure sign-up and login using JWT (JSON Web Tokens).
 - **Modern Design**: User-friendly interface built with Tailwind CSS.
+- **User Search**: Quickly find and connect with other users through an efficient search feature.
+- **Online Status**: Easily view the online status of users to know when they're available for chat.
+
+
 
 ## Technologies Used
 
