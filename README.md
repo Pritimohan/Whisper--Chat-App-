@@ -57,7 +57,7 @@ The Real-Time Chat Application is a modern web-based chat application that facil
 4. **Configure Environment Variables**
 Create a .env file in the server directory with the following content:
 
-   MONGO_URI=your-mongodb-uri
+   MONGO_DB_URI=your-mongodb-uri
    
    JWT_SECRET=your-jwt-secret
 
