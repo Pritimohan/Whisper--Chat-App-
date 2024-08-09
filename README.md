@@ -58,10 +58,11 @@ The Real-Time Chat Application is a modern web-based chat application that facil
 Create a .env file in the server directory with the following content:
 
    MONGO_URI=your-mongodb-uri
+   
    JWT_SECRET=your-jwt-secret
 
 
-5. **Start the Application**
+6. **Start the Application**
     ```bash
     # Start the backend server
     cd backend
@@ -70,7 +71,7 @@ Create a .env file in the server directory with the following content:
     cd frontend
     npm run dev
 
-6. **Access the Application**
+7. **Access the Application**
     ```bash
     http://localhost:3000
 
