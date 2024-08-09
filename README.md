@@ -54,7 +54,14 @@ The Real-Time Chat Application is a modern web-based chat application that facil
     cd frontend
     npm install
 
-4. **Start the Application**
+4. **Configure Environment Variables**
+Create a .env file in the server directory with the following content:
+
+   MONGO_URI=your-mongodb-uri
+   JWT_SECRET=your-jwt-secret
+
+
+5. **Start the Application**
     ```bash
     # Start the backend server
     cd backend
@@ -63,7 +70,7 @@ The Real-Time Chat Application is a modern web-based chat application that facil
     cd frontend
     npm run dev
 
-5. **Access the Application**
+6. **Access the Application**
     ```bash
     http://localhost:3000
 
