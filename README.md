@@ -87,7 +87,7 @@ The Real-Time Chat Application is a modern web-based chat application that facil
 
 6. **Access the Application**
    ```bash
-   http://localhost:3000
+    http://localhost:5173
    ```
 
 ## Video Demo
