@@ -44,3 +44,44 @@ The Real-Time Chat Application is a modern web-based chat application that facil
    ```bash
    git clone https://github.com/your-username/your-repository-name.git
    cd your-repository-name
+
+2. **Install Backend Dependencies**
+    ```bash
+    npm install
+
+3. **Install Frontend Dependencies**
+    ```bash
+    cd frontend
+    npm install
+
+4. **Start the Application**
+    ```bash
+    # Start the backend server
+    cd backend
+    npm start
+    # Start the frontend application
+    cd frontend
+    npm run dev
+
+5. **Access the Application**
+    ```bash
+    http://localhost:3000
+
+## License
+
+This project is open source and available under the [MIT License](LICENSE).
+
+## Acknowledgements
+
+- [Socket.io Documentation](https://socket.io/docs/)
+- [React Documentation](https://reactjs.org/docs/getting-started.html)
+- [Node.js Documentation](https://nodejs.org/en/docs/)
+- [Tailwind CSS Documentation](https://tailwindcss.com/docs)
+- [MongoDB Documentation](https://docs.mongodb.com/)
+- [JWT Documentation](https://jwt.io/introduction/)
+- [bcrypt Documentation](https://www.npmjs.com/package/bcrypt)
+- [Express.js Documentation](https://expressjs.com/en/5x/api.html)
+- [React Router Documentation](https://reactrouter.com/web/guides/quick-start)
+```
+
+
