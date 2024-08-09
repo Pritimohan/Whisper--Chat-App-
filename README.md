@@ -42,8 +42,8 @@ The Real-Time Chat Application is a modern web-based chat application that facil
 
 1. **Clone the Repository**
    ```bash
-   git clone https://github.com/your-username/your-repository-name.git
-   cd your-repository-name
+   git clone https://github.com/Pritimohan/Whisper--Chat-App-.git
+   cd Whisper--Chat-App-
 
 2. **Install Backend Dependencies**
     ```bash
