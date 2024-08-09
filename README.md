@@ -56,7 +56,6 @@ The Real-Time Chat Application is a modern web-based chat application that facil
 
    ```bash
    npm install
-
    ```
 
 3. **Install Frontend Dependencies**
@@ -70,16 +69,10 @@ The Real-Time Chat Application is a modern web-based chat application that facil
 4. **Configure Environment Variables**
    Create a `.env` file in the root directory of the project. Add the following environment variables:
 
-<<<<<<< HEAD
    ```env
    MONGO_URI=your-mongodb-uri
-=======
-   MONGO_DB_URI=your-mongodb-uri
-   
->>>>>>> 3bd9bcce300c8eba909c78ddfe972db8987f924c
    JWT_SECRET=your-jwt-secret
    ```
-
 
 5. **Start the Application**
 
@@ -96,20 +89,11 @@ The Real-Time Chat Application is a modern web-based chat application that facil
    ```bash
    http://localhost:3000
    ```
-=======
-6. **Start the Application**
-    ```bash
-    # Start the backend server
-    cd backend
-    npm start
-    # Start the frontend application
-    cd frontend
-    npm run dev
 
-7. **Access the Application**
-    ```bash
-    http://localhost:3000
-    ```
+## Video Demo
+
+[Real-Time Chat Application Demo - 1](https://www.linkedin.com/posts/pritimohan-shit_this-is-an-overview-video-of-my-project-activity-7223622890716377088-8Bd3?utm_source=share&utm_medium=member_desktop)
+[Real-Time Chat Application Demo - 2](https://www.linkedin.com/posts/pritimohan-shit_webdevelopment-fullstackdeveloper-reactjs-activity-7226106017992884225-2RgR?utm_source=share&utm_medium=member_desktop)
 
 ## License
 
@@ -131,4 +115,3 @@ This project is open source and available under the [MIT License](LICENSE).
 ## Author
 
 - [Pritimohan Shit]
-
