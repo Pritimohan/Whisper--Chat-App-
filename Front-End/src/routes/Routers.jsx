@@ -9,22 +9,20 @@ import { useSelector } from 'react-redux'
 
 
 export function Routers() {
-    const jwtToken = JSON.parse(localStorage.getItem("jwtToken"))
-
-
+    const jwtToken = JSON.parse(localStorage.getItem("jwtToken"));
     // console.log(user);
     const route = createBrowserRouter([
         {
             path: "/",
-            element: <App />,
+            element: <App/>,
             children: [
                 {
                     path: "",
-                    element: jwtToken ? <Home /> : <Navigate to={"/login"} />
+                    element: jwtToken ? <Home /> : <Navigate to="login" />
                 },
                 {
                     path: "login",
-                    element:  <LogIn />
+                    element: <LogIn/>
                 },
                 {
                     path: "signup",
