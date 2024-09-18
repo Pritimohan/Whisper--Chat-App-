@@ -9,6 +9,10 @@ The Real-Time Chat Application is a modern web-based chat application that facil
 - **Real-Time Messaging**: Real-time communication powered by Socket.io.
 - **User Authentication**: Secure sign-up and login using JWT (JSON Web Tokens).
 - **Modern Design**: User-friendly interface built with Tailwind CSS.
+- **User Search**: Quickly find and connect with other users through an efficient search feature.
+- **Online Status**: Easily view the online status of users to know when they're available for chat.
+
+
 
 ## Technologies Used
 
@@ -87,13 +91,13 @@ The Real-Time Chat Application is a modern web-based chat application that facil
 
 6. **Access the Application**
    ```bash
-   http://localhost:3000
+    http://localhost:5173
    ```
 
 ## Video Demo
 
-[Real-Time Chat Application Demo - 1](https://www.linkedin.com/posts/pritimohan-shit_this-is-an-overview-video-of-my-project-activity-7223622890716377088-8Bd3?utm_source=share&utm_medium=member_desktop)
-[Real-Time Chat Application Demo - 2](https://www.linkedin.com/posts/pritimohan-shit_webdevelopment-fullstackdeveloper-reactjs-activity-7226106017992884225-2RgR?utm_source=share&utm_medium=member_desktop)
+- [Real-Time Chat Application Demo - 1](https://www.linkedin.com/posts/pritimohan-shit_this-is-an-overview-video-of-my-project-activity-7223622890716377088-8Bd3?utm_source=share&utm_medium=member_desktop)
+- [Real-Time Chat Application Demo - 2](https://www.linkedin.com/posts/pritimohan-shit_webdevelopment-fullstackdeveloper-reactjs-activity-7226106017992884225-2RgR?utm_source=share&utm_medium=member_desktop)
 
 ## License
 
